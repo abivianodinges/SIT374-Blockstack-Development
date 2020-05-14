@@ -34,7 +34,14 @@ export default class Profile extends Component {
           <div className="panel-welcome" id="section-2">
             <div className="avatar-section">
               <img src={ person.avatarUrl() ? person.avatarUrl() : avatarFallbackImage } className="img-rounded avatar" id="avatar-image" alt=""/>
-            </div>
+              <div className="username">
+                <h4>
+                  <span id="heading-name">{ person.name() ? person.name()
+                     : 'Nameless Person'}</span>
+                </h4>
+              <span>{username}</span>
+              </div>            
+          </div>
             <p className="lead">
               <button
                 className="btn btn-primary btn-lg"
